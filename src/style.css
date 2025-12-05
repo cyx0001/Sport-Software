@@ -1,0 +1,184 @@
+/* 全局重置与字体 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa; /* 浅灰色背景 */
+    color: #333;
+}
+
+/* 容器模拟手机屏幕 */
+.container {
+    max-width: 450px; /* 模拟移动设备宽度 */
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #fff; /* 主界面白色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 顶部导航栏 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+}
+
+.app-title {
+    font-size: 1.2em;
+    color: #007bff; /* 品牌主色 */
+}
+
+/* 数据概览卡片 */
+.stats-dashboard {
+    padding: 20px 15px;
+}
+
+.stat-card {
+    background-color: #e6f0ff; /* 浅蓝色背景 */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-label {
+    margin: 0 0 5px 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.stat-value {
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
+    color: #007bff;
+    font-weight: 900;
+}
+
+/* 进度条 */
+.goal-progress-bar {
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #28a745; /* 绿色进度条 */
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.goal-text {
+    font-size: 0.8em;
+    color: #999;
+    margin: 0;
+}
+
+/* 核心动作按钮 */
+.main-action {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.action-button {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* 圆形按钮 */
+    background-color: #ff5722; /* 醒目的橙色/红色 */
+    color: white;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.action-button:hover {
+    background-color: #e64a19;
+}
+
+.action-button:active {
+    transform: scale(0.98);
+}
+
+.action-icon {
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+
+/* 活动流 */
+.activity-feed {
+    padding: 10px 15px 70px 15px; /* 底部留出空间给导航栏 */
+    flex-grow: 1; /* 占据剩余空间 */
+}
+
+.activity-feed h3 {
+    border-left: 4px solid #007bff;
+    padding-left: 8px;
+    margin-bottom: 15px;
+}
+
+.activity-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+}
+
+.activity-item p {
+    margin: 0;
+}
+
+.activity-item .detail {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* 底部导航栏 */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 450px;
+    height: 60px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: env(safe-area-inset-bottom); /* 适应 iPhone X 等刘海屏 */
+    z-index: 10;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.75em;
+    transition: color 0.2s;
+}
+
+.nav-item.active {
+    color: #007bff; /* 选中状态颜色 */
+}
+
+.nav-item .material-icons {
+    font-size: 24px;
+}
